@@ -5,7 +5,10 @@ public class Board {
 	 * variables: Tiles[][] (2d array to represent the board)
 	 */
 	private int[][] Tiles;
-	//getters and setters (again, build in way of creating this!)***
+
+  /**
+  * Default Constructor
+  */
 	Board(int[][] boardsize){
 		Tiles=boardsize;
 	}
@@ -16,12 +19,15 @@ public class Board {
 	public int[][] getTiles() {
 		return Tiles;
 	}
-	/**
-	 * 
-	 * @param tiles - the tiles to be added to the board
-	 */
+	
+	//Getters and setters for Tiles[][]
+	public int[][] getTiles() {
+		return Tiles;
+	}
+
 	public void setTiles(int[][] tiles) {
 		Tiles = tiles;
 	}
-	
+
+  
 }
