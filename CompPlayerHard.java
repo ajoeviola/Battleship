@@ -25,7 +25,7 @@ public class CompPlayerHard extends Player{
 			theboard.getTiles()[sp1][sp1]=2;
 		}
 		else if (theboard.occupado(sp1,sp2)==false) {
-			//Set the board to display a non-hit marker here with GUI
+			theboard.getTiles()[sp2][sp2]=3;
 		}
 	}
 	public void placeship(Board theboard) {

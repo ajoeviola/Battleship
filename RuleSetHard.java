@@ -3,22 +3,31 @@ public class RuleSetHard implements Rules {
 	private int amtHangars;
 	private int amtSubmarines;
 	private int amtSailboats;
+	Player computer;
+	
+	public RuleSetHard() {
+		setBoardSize();
+		computer = new CompPlayerHard();
+	}
+	
 	@Override
-	public void setCPUdifficulty() {
-		// TODO Auto-generated method stub
-
+	public void setCPUdifficulty(Player comptype) {
+		//TODO Auto-generated method stub
+		computer = comptype;
 	}
 
 	@Override
-	public void setBoardSize() {
-		// TODO Auto-generated method stub
-
+	public Board setBoardSize() {
+		//TODO Auto-generated method stub
+		Board myboard = new Board(10);
+		return myboard;
 	}
 
 	@Override
-	public void setamtTypeShips() {
-		// TODO Auto-generated method stub
-
+	public void setamtTypeShips(int hangar, int sub, int sail) {
+		setAmtHangars(hangar);
+		setAmtSubmarines(sub);
+		setAmtSailboats(sail);
 	}
 
 	public int getAmtHangars() {
@@ -43,6 +52,13 @@ public class RuleSetHard implements Rules {
 
 	public void setAmtSailboats(int amtSailboats) {
 		this.amtSailboats = amtSailboats;
+	}
+
+	@Override
+	public void initShipTypeamts() {
+		amtHangars=1;
+		amtSubmarines=2;
+		amtSailboats=2;
 	}
 
 }

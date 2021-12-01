@@ -4,16 +4,18 @@ public class RuleSetEasy implements Rules {
 	private int amtSubmarines;
 	private int amtSailboats;
 	private Board gameboard;
+	Player computer;
 	
 	public RuleSetEasy() {
 		gameboard=setBoardSize();
+		computer = new CompPlayerEasy();
 	}
 	
 	
 	@Override
-	public void setCPUdifficulty() {
+	public void setCPUdifficulty(Player comptype) {
 		// TODO Auto-generated method stub
-		CompPlayerHard = new CompPlayerHard
+		computer = comptype;
 	}
 
 	@Override
@@ -24,8 +26,10 @@ public class RuleSetEasy implements Rules {
 	}
 
 	@Override
-	public void setamtTypeShips() {
-		
+	public void setamtTypeShips(int hangar, int sub, int sail) {
+		setAmtHangars(hangar);
+		setAmtSubmarines(sub);
+		setAmtSailboats(sail);
 	}
 
 	public int getAmtHangars() {
@@ -51,5 +55,14 @@ public class RuleSetEasy implements Rules {
 	public void setAmtSailboats(int amtSailboats) {
 		this.amtSailboats = amtSailboats;
 	}
+
+	@Override
+	public void initShipTypeamts() {
+		// TODO Auto-generated method stub
+		amtHangars=1;
+		amtSubmarines=2;
+		amtSailboats=2;
+	}
+
 
 }

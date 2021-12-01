@@ -1,8 +1,7 @@
 import java.util.*;
-import java.exceptions;
 public class CompPlayerEasy extends Player {
 	private ArrayList<Ship> shiplist = new ArrayList<Ship>();
-	CompPlayerEasy(){
+	public CompPlayerEasy(){
 		setShiplist();
 	}
 	public ArrayList<Ship> getShiplist() {
@@ -25,7 +24,7 @@ public class CompPlayerEasy extends Player {
 			theboard.getTiles()[sp1][sp1]=2;
 		}
 		else if (theboard.occupado(sp1,sp2)==false) {
-			//Set the board to display a non-hit marker here with GUI
+			theboard.getTiles()[sp1][sp2]=3;
 		}
 	}
 	public void placeship(Board theboard,Ship shiplace) {
