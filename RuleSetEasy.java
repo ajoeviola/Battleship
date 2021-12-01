@@ -3,22 +3,29 @@ public class RuleSetEasy implements Rules {
 	private int amtHangars;
 	private int amtSubmarines;
 	private int amtSailboats;
+	private Board gameboard;
+	
+	public RuleSetEasy() {
+		gameboard=setBoardSize();
+	}
+	
+	
 	@Override
 	public void setCPUdifficulty() {
 		// TODO Auto-generated method stub
-
+		CompPlayerHard = new CompPlayerHard
 	}
 
 	@Override
-	public void setBoardSize() {
+	public Board setBoardSize() {
 		// TODO Auto-generated method stub
-
+		Board myboard = new Board(8);
+		return myboard;
 	}
 
 	@Override
 	public void setamtTypeShips() {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	public int getAmtHangars() {
