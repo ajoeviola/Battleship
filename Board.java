@@ -29,3 +29,30 @@ public class Board {
 	
 
 }
+
+package application;
+
+public class Board {
+    int Tiles[][];
+
+    public Board() {
+        Tiles = new int[10][10];
+        
+        for(int i = 0;i<Tiles.length;i++){
+            
+            for(int j = 0;j<Tiles[i].length;j++){
+            
+                Tiles[i][j] = 0;
+            }
+        }
+        
+    }
+
+    public int[][] getTiles() {
+        return Tiles;
+    }
+
+    public void setTiles(int[][] tiles) {
+        Tiles = tiles;
+    }
+}
