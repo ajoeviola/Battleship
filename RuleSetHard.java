@@ -1,4 +1,4 @@
-
+package application;
 public class RuleSetHard implements Rules {
 	private int amtHangars;
 	private int amtSubmarines;
