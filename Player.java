@@ -1,13 +1,5 @@
-
+package application;
 public abstract class Player {
-		
-	/**
-	 * variables:
-	 * shiplist : Ship<integer> (arraylist) (a list of the player's ships)
-	 */
-	
-	//getters and setters (there is a built in command for this!!!)***
-	
 	
 	/**
 	 * 

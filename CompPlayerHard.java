@@ -1,3 +1,4 @@
+package application;
 import java.util.*;
 public class CompPlayerHard extends Player{
 	private ArrayList<Ship> shiplist = new ArrayList<Ship>();

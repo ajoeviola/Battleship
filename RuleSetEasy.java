@@ -1,3 +1,4 @@
+package application;
 
 public class RuleSetEasy implements Rules {
 	private int amtHangars;

@@ -1,13 +1,11 @@
 package application;
-
 public class Board {
 
 	/**
 	 * variables: Tiles[][] (2d array to represent the board)
 	 */
-	int Tiles[][];
-	
-	
+	private int Tiles[][];
+	private int boardsize;
 	/**
 	 * Our default constructor
 	 * 
@@ -15,7 +13,15 @@ public class Board {
 	 * Each loop will fill the board with 0's. 0 means there is no ship there,
 	 * so it is an empty board initially
 	 */
-	public Board() {}
+	public Board(int size) {
+		Tiles = new int[size][size];
+		boardsize=size;
+		for (int i=0;i<size;i++) {
+			for (int j=0;j<size;j++) {
+				Tiles[i][j]=0;
+			}
+		}
+	}
 
 	
 	//Getters and setters for Tiles[][]
@@ -26,33 +32,15 @@ public class Board {
 	public void setTiles(int[][] tiles) {
 		Tiles = tiles;
 	}
-	
+	public int getboardsize() {
+		return boardsize;
+	}
+	public boolean occupado(int a, int b) {
+		if (Tiles[a][b]==0 || Tiles[a][b] == 3) {
+			return false;
+		}
+		else
+			return true;
+	}
 
-}
-
-package application;
-
-public class Board {
-    int Tiles[][];
-
-    public Board() {
-        Tiles = new int[10][10];
-        
-        for(int i = 0;i<Tiles.length;i++){
-            
-            for(int j = 0;j<Tiles[i].length;j++){
-            
-                Tiles[i][j] = 0;
-            }
-        }
-        
-    }
-
-    public int[][] getTiles() {
-        return Tiles;
-    }
-
-    public void setTiles(int[][] tiles) {
-        Tiles = tiles;
-    }
 }
