@@ -1,14 +1,24 @@
 package application;
 import java.util.*;
-
 import javafx.scene.Node;
+
 public class HumanPlayer extends Player {
-	private ArrayList<Ship> shiplist = new ArrayList<Ship>();
 	public Board theboard;
 	
+	/**
+	 * This is the default empty constructor, just to create a HumanPlayer object
+	 * 
+	 */
 	public HumanPlayer() {
 	}
 	
+	/**
+	 * This method allows the user to attack the enemy board
+	 * 
+	 * @param theboard - the enemy board to be attacked
+	 * @param sp1 - x variable
+	 * @param sp2 - y variable
+	 */
 	public void attack(Board theboard,int sp1, int sp2) {
 		
 		if (theboard.occupado(sp1, sp2)==true) {
@@ -18,15 +28,13 @@ public class HumanPlayer extends Player {
 			theboard.getTiles()[sp1][sp2]=3;
 		}
 	}
-	public void placeship(Board theboard) {}
-	public ArrayList<Ship> getShiplist() {
-		return shiplist;
-	}
-	public void setShiplist(ArrayList<Ship> shiplist) {
-		this.shiplist = shiplist;
-	}
 	
-	
+	/**
+	 * This method was used during testing to set a preset board placement, so we could see how well the
+	 * CPU attack function worked
+	 * 
+	 * @param theboard - the board to be initialized
+	 */
 	public void autoboardplace(Board theboard) {
 		for (int i=0;i<4;i++) {
 			theboard.getTiles()[i][0]=1;
