@@ -1,64 +1,50 @@
 package application;
+
 public class RuleSetHard implements Rules {
-	private int amtHangars;
-	private int amtSubmarines;
-	private int amtSailboats;
-	Player computer;
+	private int BOARD_SIZE=13;
+	private int SHIP_AMOUNT=10;
 	
-	public RuleSetHard() {
-		setBoardSize();
-		computer = new CompPlayerHard();
-	}
+	/**
+	 * This is an empty basic constructor just for creation of an empty RuleSetEasy object
+	 */
+	public RuleSetHard() {};
+	
 	
 	@Override
-	public void setCPUdifficulty(Player comptype) {
-		//TODO Auto-generated method stub
-		computer = comptype;
+	/**
+	 * This method sets up the size of the board that the game will take place on
+	 * 
+	 * @param bOARD_SIZE - the size of the board to replace BOARD_SIZE variable
+	 */
+	public void setBoardSize(int bOARD_SIZE) {
+		BOARD_SIZE = bOARD_SIZE;
 	}
 
-	@Override
-	public Board setBoardSize() {
-		//TODO Auto-generated method stub
-		Board myboard = new Board(10);
-		return myboard;
+	/**
+	 * This method gets the size of the board that the game will take place on
+	 *  
+	 * @return BOARD_SIZE - The size of the board that the game takes place on
+	 */
+	public int getBOARD_SIZE() {
+		return BOARD_SIZE;
 	}
-
-	@Override
-	public void setamtTypeShips(int hangar, int sub, int sail) {
-		setAmtHangars(hangar);
-		setAmtSubmarines(sub);
-		setAmtSailboats(sail);
+	
+	/**
+	 * This method returns the amount of ships to be used in gameplay
+	 * 
+	 * @return SHIP_AMOUNT - The amount of ships to be used in gameplay.
+	 */
+	public int getSHIP_AMOUNT() {
+		return SHIP_AMOUNT;
 	}
-
-	public int getAmtHangars() {
-		return amtHangars;
+	
+	/**
+	 * This method sets the amount of ships to be used in gameplay
+	 *  
+	 * @param sHIP_AMOUNT - the amount that will replace the SHIP_AMOUNT variable
+	 */
+	public void setSHIP_AMOUNT(int sHIP_AMOUNT) {
+		SHIP_AMOUNT = sHIP_AMOUNT;
 	}
-
-	public void setAmtHangars(int amtHangars) {
-		this.amtHangars = amtHangars;
-	}
-
-	public int getAmtSubmarines() {
-		return amtSubmarines;
-	}
-
-	public void setAmtSubmarines(int amtSubmarines) {
-		this.amtSubmarines = amtSubmarines;
-	}
-
-	public int getAmtSailboats() {
-		return amtSailboats;
-	}
-
-	public void setAmtSailboats(int amtSailboats) {
-		this.amtSailboats = amtSailboats;
-	}
-
-	@Override
-	public void initShipTypeamts() {
-		amtHangars=1;
-		amtSubmarines=2;
-		amtSailboats=2;
-	}
-
+	
 }

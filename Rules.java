@@ -1,21 +1,11 @@
 package application;
+
 public interface Rules {
-	
 	/**
-	 * Sets the difficulty of the CPU to either the Easy or Hard CPU
+	 * This method sets up the size of the board that the game will take place on
+	 * 
+	 * @param bOARD_SIZE - size of the board that the game will take place on (board_size x board_size)
 	 */
-	public void setCPUdifficulty(Player comptype);
-	
-	/**
-	 * Sets the size of the board
-	 */
-	public Board setBoardSize();
-	
-	
-	/**
-	 * Sets the amount of each type of ship
-	 */
-	public void setamtTypeShips(int hangar, int sub, int sail);
-	
-	public void initShipTypeamts();
+	public void setBoardSize(int bOARD_SIZE);
+
 }
