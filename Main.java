@@ -862,7 +862,7 @@ public class Main extends Application {
 	
 		//Showing the scene
 		Scene primaryscene = new Scene(finalcut,2000,900);
-		primaryStage.setTitle("Bulseye Battleship");
+		primaryStage.setTitle("Bullseye Battleship");
 		primaryStage.setScene(primaryscene);
 		primaryStage.show();
 	}
